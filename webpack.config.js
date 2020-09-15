@@ -7,13 +7,14 @@ module.exports = (env) => {
     entry: path.resolve(__dirname, "src", "app.js"),
     output: {
       filename: "bundle.js",
-      path: path.resolve(__dirname, "public"),
+      path: path.resolve(__dirname, "public", "dist"),
     },
     mode: "development",
     devtool: isProduction ? "source-map" : "inline-source-map",
     devServer: {
       contentBase: "./public",
       historyApiFallback: true,
+      publicPath: "/dist/",
     },
     module: {
       rules: [
