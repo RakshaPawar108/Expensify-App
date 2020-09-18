@@ -25,6 +25,7 @@
     "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
     "firebase": "^7.20.0",
+    "history": "^4.10.1",
     "mini-css-extract-plugin": "github:webpack-contrib/mini-css-extract-plugin",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
