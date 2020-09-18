@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render editExpense page 1`] = `
+exports[`Should render startEditExpense page 1`] = `
 <div>
   <ExpenseForm
     expense={
