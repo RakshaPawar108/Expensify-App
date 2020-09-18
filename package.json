@@ -8,7 +8,7 @@
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json",
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
     "start": "node server/server.js",
     "heroku-postbuild": "npm run build:prod"
   },
@@ -24,6 +24,7 @@
     "enzyme-adapter-react-16": "^1.15.4",
     "express": "^4.17.1",
     "extract-text-webpack-plugin": "^3.0.2",
+    "firebase": "^7.20.0",
     "mini-css-extract-plugin": "github:webpack-contrib/mini-css-extract-plugin",
     "moment": "^2.27.0",
     "node-sass": "^4.14.1",
@@ -40,6 +41,8 @@
     "react-router-dom": "4.1.2",
     "react-scripts": "^3.4.3",
     "redux": "3.7.2",
+    "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.3.0",
     "sass-loader": "6.0.6",
     "style-loader": "0.18.2",
     "uuid": "^8.2.0",
@@ -51,10 +54,12 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^22.4.3",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.5.0",
-    "regenerator-runtime": "^0.13.7",
     "react-test-renderer": "^16.0.0",
+    "regenerator-runtime": "^0.13.7",
     "webpack-dev-server": "^3.11.0"
   }
 }
