@@ -8,8 +8,7 @@ console.log(now.format("MMM Do, YYYY"));
 
 export default class ExpenseForm extends Component {
   constructor(props) {
-    super(props);
-
+    super();
     this.state = {
       description: props.expense ? props.expense.description : "",
       note: props.expense ? props.expense.note : "",
@@ -73,6 +72,7 @@ export default class ExpenseForm extends Component {
         {this.state.error && <p>{this.state.error}</p>}
         <form onSubmit={this.onSubmit}>
           <input
+            className="text-input"
             type="text"
             placeholder="Description"
             autoFocus
@@ -80,6 +80,7 @@ export default class ExpenseForm extends Component {
             onChange={this.onDescriptionChange}
           />
           <input
+            className="text-input"
             type="text"
             placeholder="Amount"
             value={this.state.amount}
@@ -94,6 +95,7 @@ export default class ExpenseForm extends Component {
             isOutsideRange={() => false}
           />
           <textarea
+            className="textarea"
             value={this.state.note}
             onChange={this.onNoteChange}
             placeholder="Add a note for your expense (Optional)"
