@@ -18,6 +18,10 @@
   background: #888;
 }
 
+.button--delete {
+  background: darken($color: red, $amount: 25%);
+}
+
 .button:focus {
   outline: none;
 }
