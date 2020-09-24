@@ -12,7 +12,7 @@ export class EditExpensePage extends Component {
   onSubmit = (expense) => {
     this.props.startEditExpense(this.props.expense.id, expense);
 
-    this.props.history.push("/dashboard");
+    this.props.history.replace("/dashboard");
   };
 
   onRemove = () => {
